@@ -1,7 +1,10 @@
 use std::fmt;
 use chrono::{Datelike, Timelike};
+
+use crate::get_next_class::get_next_class;
 mod classes;
 mod class;
+mod get_next_class;
 
 fn main() {
     impl fmt::Display for class::Day {
@@ -33,6 +36,7 @@ fn main() {
             }            
         });
     });
+    get_next_class(_classes, _hour, _minutes);
 
     
 
